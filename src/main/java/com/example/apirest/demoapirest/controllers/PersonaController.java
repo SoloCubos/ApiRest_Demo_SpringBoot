@@ -43,7 +43,7 @@ public class PersonaController {
         }
     }
 
-    @PostMapping("")
+    @PostMapping("/")
     public ResponseEntity<?> save(@RequestBody Persona persona){
         try {
             return ResponseEntity.status(HttpStatus.OK).body(personaService.save(persona));

@@ -56,7 +56,7 @@ public class PersonaService implements BaseService<Persona>{
         try {
             Optional<Persona> personaOptional = personaRepository.findById(id);
             Persona persona = personaOptional.get();
-            persona = personaRepository.save(persona);
+            persona = personaRepository.save(entity);
             return persona;
         } catch (Exception e) {
             throw new Exception(e.getMessage());
