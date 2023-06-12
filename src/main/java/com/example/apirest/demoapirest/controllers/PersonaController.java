@@ -16,7 +16,7 @@ import com.example.apirest.demoapirest.services.impl.PersonaServiceImpl;
 public class PersonaController extends BaseControllerImpl<Persona, PersonaServiceImpl>{
 
     @Autowired
-    private PersonaServiceImpl personaService;
+    private PersonaServiceImpl personaServiceImpl;
 
     
 }
