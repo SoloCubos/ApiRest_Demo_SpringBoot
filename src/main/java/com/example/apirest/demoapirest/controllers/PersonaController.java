@@ -13,20 +13,19 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.service.annotation.DeleteExchange;
 
 import com.example.apirest.demoapirest.entities.Persona;
 import com.example.apirest.demoapirest.services.PersonaService;
 //@Controller
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping(path = "api/v1/personas")
+@RequestMapping(path = "/personas")
 public class PersonaController {
 
     @Autowired
     private PersonaService personaService;
 
-    @GetMapping("")
+    @GetMapping("/")
     public ResponseEntity<?>getAll(){
         try {
             return ResponseEntity.status(HttpStatus.OK).body(personaService.findAll());
